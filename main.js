@@ -1,17 +1,34 @@
 // Declare variables first
 const form = document.querySelector("#signupForm");
-const nameInput = document.querySelector("#name");
+const FirstnameInput = document.querySelector("#firstName");
+const lastNameInput = document.querySelector("#lastName");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
-const inputs = [nameInput, emailInput, passwordInput];
+const inputs = [FirstnameInput,lastNameInput , emailInput, passwordInput];
 
-// Function to validate input
+// Function to validate input with custom error messages
 function validateInput(input) {
     const errorMessage = input.nextElementSibling;
     const value = input.value.trim();
 
     if (!value) {
-        errorMessage.textContent = "This field is required.";
+        if (input === FirstnameInput) {
+            errorMessage.textContent = `${input.id} cannot be empty.`;
+        } else if (input === lastNameInput) {
+            errorMessage.textContent = "Last name cannot be empty.";}
+        
+        else if (input === emailInput) {
+            errorMessage.textContent = "Email is required.";
+        } else if (input === passwordInput) {
+            errorMessage.textContent = "Password must not be blank.";
+        }
+        input.classList.add("invalid");
+        errorMessage.style.visibility = "visible";
+        return false;
+    }
+
+    if (input === emailInput && !value.includes("@")) {
+        errorMessage.textContent = "Please enter a valid email address.";
         input.classList.add("invalid");
         errorMessage.style.visibility = "visible";
         return false;
@@ -41,4 +58,3 @@ form.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevent form submission if validation fails
     }
 });
-

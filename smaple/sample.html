@@ -10,14 +10,18 @@
     <div class="container">
         <form id="signupForm">
             <h2>Sign Up</h2>
-            
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" oninput="validateInput(this)">
-            <small class="error-message">Must be in lowercase</small>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" oninput="validateInput(this)">
-            <small class="error-message">Must be in lowercase</small>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <small class="error-message"></small>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <small class="error-message"></small>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <small class="error-message"></small>
 
             <button type="submit">Sign Up</button>
         </form>
@@ -26,3 +30,4 @@
     <script src="smaple.js"></script>
 </body>
 </html>
+

@@ -15,7 +15,7 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 97%, 43%); text-decoration: none; }
   </style>
 </head>
 <body>
@@ -32,33 +32,36 @@
       <form id="signupForm">
         
         <input type="text" id="firstName" name="firstName" placeholder="First Name">
-        <small>first Name cannot be empty</small>
+        <small class="error-message">first Name cannot be empty</small>
 
         
         <input type="text" id="lastName" name="lastName" placeholder="Last Name">
-        <small>last Name cannot be empty</small>
+        <small class="error-message">last Name cannot be empty</small>
 
         
         <input type="email" id="email" name="email" placeholder="Email Address">
-        <small>looks like this is not an email</small>
+        <small class="error-message">looks like this is not an email</small>
 
 
         <input type="password" id="password" name="password" placeholder="Password">
-        <small>password can not be empty</small>
+        <small class="error-message">password can not be empty</small>
 
 
-        <button type="submit">Claim your free trial</button>
+        <button type="submit" id="submitBtn">Claim your free trial</button>
         <small class="term">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
       </form>
     </section>
   </main>
 
+  <script src="main.js"></script>
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Sadiki Benda</a>.
     </p>
   </footer>
+
+  
 </body>
 </html>
